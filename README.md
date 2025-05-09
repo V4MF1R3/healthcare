@@ -1,52 +1,73 @@
-# Healthcare Project
+# Healthcare Backend
 
-## Overview
-This project is designed to provide solutions for managing healthcare-related data and processes efficiently. It aims to streamline workflows, improve patient care, and ensure data security.
+## 🩺 Overview
+This project is a backend system for managing healthcare-related data such as patients, doctors, and their associations. Built with **Django**, **Django REST Framework**, and **PostgreSQL**, it supports JWT-based user authentication and RESTful APIs for healthcare operations.
 
-## Features
-- Patient management system
-- Appointment scheduling
-- Electronic health records (EHR)
-- Billing and invoicing
-- Reporting and analytics
+## 🚀 Features
+- User registration and login (JWT authentication)
+- Patient management (CRUD)
+- Doctor management (CRUD)
+- Patient-doctor assignment
+- Secure API access for authenticated users
 
-## Installation
-1. Clone the repository:
+## 🧰 Tech Stack
+- Python
+- Django
+- Django REST Framework
+- PostgreSQL
+- JWT (via `djangorestframework-simplejwt`)
+
+---
+
+## 🛠️ Installation
+
+### 1. Clone the Repository
     ```bash
     git clone <repository-url>
-    ```
-2. Navigate to the project directory:
-    ```bash
     cd healthcare
     ```
-3. Install dependencies:
+
+###2. Create & Activate Virtual Environment
     ```bash
-    npm install
+    python -m venv env
+    source env/bin/activate  # On Windows: env\Scripts\activate
     ```
 
-## Usage
-1. Start the development server:
+###3. Install Dependencies
     ```bash
-    npm start
+    pip install -r requirements.txt
     ```
-2. Open your browser and navigate to `http://localhost:3000`.
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch:
+###4. Set Up PostgreSQL
+    Create a PostgreSQL database and user:
     ```bash
-    git checkout -b feature-name
+    CREATE DATABASE healthcare_db;
+    CREATE USER healthcare_user WITH PASSWORD 'yourpassword';
+    GRANT ALL PRIVILEGES ON DATABASE healthcare_db TO healthcare_user;
     ```
-3. Commit your changes:
+
+###5. Configure Environment Variables
+    Create a .env file in the root directory:
     ```bash
-    git commit -m "Add feature-name"
+    SECRET_KEY=your_django_secret_key
+    DEBUG=True
+    DB_NAME=healthcare_db
+    DB_USER=healthcare_user
+    DB_PASSWORD=yourpassword
+    DB_HOST=localhost
+    DB_PORT=5432
     ```
-4. Push to the branch:
+    Update settings.py to load these using python-decouple or os.environ.
+
+###6. Run Migrations
     ```bash
-    git push origin feature-name
+    python manage.py makemigrations
+    python manage.py migrate
     ```
-5. Open a pull request.
+###7. Run Development Server
+    ```bash
+    python manage.py runserver
+    ```
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
