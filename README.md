@@ -57,7 +57,7 @@ DB_PASSWORD=yourpassword
 DB_HOST=localhost
 DB_PORT=5432
 ```
-    Update settings.py to load these using python-decouple or os.environ.
+Update settings.py to load these using python-decouple or os.environ.
 
 ### 6. Run Migrations
 ```bash
