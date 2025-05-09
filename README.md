@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Set Up PostgreSQL
-    Create a PostgreSQL database and user:
+Create a PostgreSQL database and user:
 ```bash
 CREATE DATABASE healthcare_db;
 CREATE USER healthcare_user WITH PASSWORD 'yourpassword';
@@ -47,7 +47,7 @@ GRANT ALL PRIVILEGES ON DATABASE healthcare_db TO healthcare_user;
 ```
 
 ### 5. Configure Environment Variables
-    Create a .env file in the root directory:
+Create a .env file in the root directory:
 ```bash
 SECRET_KEY=your_django_secret_key
 DEBUG=True
