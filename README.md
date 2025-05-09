@@ -22,52 +22,53 @@ This project is a backend system for managing healthcare-related data such as pa
 ## 🛠️ Installation
 
 ### 1. Clone the Repository
-    ```bash
-    git clone <repository-url>
-    cd healthcare
-    ```
+```bash
+git clone <repository-url>
+cd healthcare
+```
 
 ###2. Create & Activate Virtual Environment
-    ```bash
-    python -m venv env
-    source env/bin/activate  # On Windows: env\Scripts\activate
-    ```
+```bash
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+```
 
 ###3. Install Dependencies
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ###4. Set Up PostgreSQL
     Create a PostgreSQL database and user:
-    ```bash
-    CREATE DATABASE healthcare_db;
-    CREATE USER healthcare_user WITH PASSWORD 'yourpassword';
-    GRANT ALL PRIVILEGES ON DATABASE healthcare_db TO healthcare_user;
-    ```
+```bash
+CREATE DATABASE healthcare_db;
+CREATE USER healthcare_user WITH PASSWORD 'yourpassword';
+GRANT ALL PRIVILEGES ON DATABASE healthcare_db TO healthcare_user;
+```
 
 ###5. Configure Environment Variables
     Create a .env file in the root directory:
-    ```bash
-    SECRET_KEY=your_django_secret_key
-    DEBUG=True
-    DB_NAME=healthcare_db
-    DB_USER=healthcare_user
-    DB_PASSWORD=yourpassword
-    DB_HOST=localhost
-    DB_PORT=5432
-    ```
+```bash
+SECRET_KEY=your_django_secret_key
+DEBUG=True
+DB_NAME=healthcare_db
+DB_USER=healthcare_user
+DB_PASSWORD=yourpassword
+DB_HOST=localhost
+DB_PORT=5432
+```
     Update settings.py to load these using python-decouple or os.environ.
 
 ###6. Run Migrations
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
 ###7. Run Development Server
-    ```bash
-    python manage.py runserver
-    ```
+```bash
+python manage.py runserver
+```
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
