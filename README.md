@@ -23,7 +23,7 @@ This project is a backend system for managing healthcare-related data such as pa
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/V4MF1R3/healthcare.git
 cd healthcare
 ```
 
