@@ -61,6 +61,7 @@ Update settings.py to load these using python-decouple or os.environ.
 
 ### 6. Run Migrations
 ```bash
+cd healthcare_backend
 python manage.py makemigrations
 python manage.py migrate
 ```
